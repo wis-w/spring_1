@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 配置bean 通过反射创建对象，id表示表示 -->
+<bean id = "helloWorld" class="com.edu.HelloWorld">
+	<property name="name2" value="hello_edu"></property>
+</bean>
+
+</beans>
