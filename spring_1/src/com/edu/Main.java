@@ -2,7 +2,6 @@ package com.edu;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
  * @author  wyg_edu
@@ -23,13 +22,12 @@ public class Main {
 //		ApplicationContext ctx1 = new FileSystemXmlApplicationContext("D:/");//从文件系统中获取
 		//2、从Ioc中获取bean实例
 //		HelloWorld hello = (HelloWorld) ctx.getBean("helloWorld");// 通过id获取 id唯一
-//		HelloWorld hello = ctx.getBean(HelloWorld.class);//利用类型返回IOC容器中的bean，但是要求IOC容器中智能有一个该类型的bean
-//		
-//		hello.say();
+		HelloWorld hello = ctx.getBean(HelloWorld.class);//利用类型返回IOC容器中的bean，但是要求IOC容器中智能有一个该类型的bean
 		
-		ApplicationContext ctx2 = new ClassPathXmlApplicationContext("application.xml");
-		Car car = ctx2.getBean(Car.class);
-		System.out.println(car.toString());
+		hello.say();
+		
+		Car car = ctx.getBean(Car.class);
+		System.out.println(car);
 	}
 
 }
